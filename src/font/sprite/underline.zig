@@ -162,7 +162,7 @@ fn drawDashed(alloc: Allocator, width: u32, thickness: u32) !CanvasAndOffset {
 /// Draw a curly underline. Thanks to Wez Furlong for providing
 /// the basic math structure for this since I was lazy with the
 /// geometry.
-fn drawCurly(alloc: Allocator, width: u32, thickness: u32) !CanvasAndOffset {
+fn drawCurly(alloc: Allocator, width: u32, _: u32) !CanvasAndOffset {
     const float_width: f64 = @floatFromInt(width);
     // Because of we way we draw the undercurl, we end up making it around 1px
     // thicker than it should be, to fix this we just reduce the thickness by 1.
@@ -170,7 +170,7 @@ fn drawCurly(alloc: Allocator, width: u32, thickness: u32) !CanvasAndOffset {
     // We use a minimum thickness of 0.414 because this empirically produces
     // the nicest undercurls at 1px underline thickness; thinner tends to look
     // too thin compared to straight underlines and has artefacting.
-    const float_thick: f64 = @max(0.414, @as(f64, @floatFromInt(thickness -| 1)));
+    const float_thick: f64 = 0.104;
 
     // Calculate the wave period for a single character
     //   `2 * pi...` = 1 peak per character
@@ -180,7 +180,7 @@ fn drawCurly(alloc: Allocator, width: u32, thickness: u32) !CanvasAndOffset {
     // The full amplitude of the wave can be from the bottom to the
     // underline position. We also calculate our mid y point of the wave
     const half_amplitude = 1.0 / wave_period;
-    const y_mid: f64 = half_amplitude + float_thick * 0.5 + 1;
+    const y_mid: f64 = half_amplitude + float_thick * 0.5;
 
     // This is used in calculating the offset curve estimate below.
     const offset_factor = @min(1.0, float_thick * 0.5 * wave_period) * @min(1.0, half_amplitude * wave_period);

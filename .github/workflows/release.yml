@@ -1,0 +1,48 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+-custom
+      - v[0-9]+.[0-9]+.[0-9]+-custom-r[0-9]+
+
+jobs:
+  build:
+    runs-on: macos-14
+    env:
+      xcode_version: 16.2
+      macosx_sdk: macosx15.2
+      zig_version: 0.13.0
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install zig
+        run: |
+          mkdir -p opt/zig
+          cd opt
+          curl -L 'https://ziglang.org/download/${{ env.zig_version }}/zig-macos-aarch64-${{ env.zig_version }}.tar.xz' \
+            | tar -Jxf - --strip-components=1 -C zig
+          echo "$(pwd)/zig" >> $GITHUB_PATH
+
+      - name: Setup Xcode
+        run: sudo xcode-select -s '/Applications/Xcode_${{ env.xcode_version }}.app/Contents/Developer'
+
+      - name: Replace build.zig.zon
+        run: sed -i '' "s@deps/ziglyph@$(pwd)/deps/ziglyph@" build.zig.zon
+
+      - name: Build
+        run: |
+          zig build -Doptimize=ReleaseFast
+          cd macos
+          xcodebuild EXCLUDED_ARCHS=x86_64
+
+      - name: Archive
+        run: tar -C macos/build/ReleaseLocal -Jcvf Ghostty.tar.xz Ghostty.app
+
+      - name: Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "*.tar.xz"
+          allowUpdates: true

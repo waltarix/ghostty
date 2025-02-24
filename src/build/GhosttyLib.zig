@@ -76,16 +76,11 @@ pub fn initMacOSUniversal(
         b,
         Config.genericMacOSTarget(b, .aarch64),
     ));
-    const x86_64 = try initStatic(b, &try original_deps.retarget(
-        b,
-        Config.genericMacOSTarget(b, .x86_64),
-    ));
 
     const universal = LipoStep.create(b, .{
         .name = "ghostty",
         .out_name = "libghostty.a",
         .input_a = aarch64.output,
-        .input_b = x86_64.output,
     });
 
     return .{

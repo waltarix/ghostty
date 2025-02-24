@@ -16,7 +16,6 @@ pub const Options = struct {
 
     /// Library file (dylib, a) to package.
     input_a: LazyPath,
-    input_b: LazyPath,
 };
 
 step: *Step,
@@ -27,11 +26,10 @@ output: LazyPath,
 pub fn create(b: *std.Build, opts: Options) *LipoStep {
     const self = b.allocator.create(LipoStep) catch @panic("OOM");
 
-    const run_step = RunStep.create(b, b.fmt("lipo {s}", .{opts.name}));
-    run_step.addArgs(&.{ "lipo", "-create", "-output" });
-    const output = run_step.addOutputFileArg(opts.out_name);
+    const run_step = RunStep.create(b, b.fmt("cp {s}", .{opts.name}));
+    run_step.addArgs(&.{"cp"});
     run_step.addFileArg(opts.input_a);
-    run_step.addFileArg(opts.input_b);
+    const output = run_step.addOutputFileArg(opts.out_name);
 
     self.* = .{
         .step = &run_step.step,
