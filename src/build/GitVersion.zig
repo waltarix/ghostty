@@ -69,7 +69,14 @@ pub fn detect(b: *std.Build) !Version {
     return .{
         .short_hash = short_hash,
         .changes = changes,
-        .tag = if (tag.len > 0) std.mem.trimRight(u8, tag, "\r\n ") else null,
+        .tag = if (tag.len > 0) tag: {
+            const trimmed = std.mem.trimRight(u8, tag, "\r\n ");
+            // Remove the -custom suffix if present
+            break :tag if (std.mem.indexOf(u8, trimmed, "-custom")) |idx|
+                trimmed[0..idx]
+            else
+                trimmed;
+        } else null,
         .branch = std.mem.trimRight(u8, branch, "\r\n "),
     };
 }
