@@ -31,22 +31,10 @@ pub fn init(
         .ReleaseSafe,
         .ReleaseSmall,
         .ReleaseFast,
-        => "Release",
+        => "ReleaseLocal",
     };
 
-    const xc_arch: ?[]const u8 = switch (deps.xcframework.target) {
-        // Universal is our default target, so we don't have to
-        // add anything.
-        .universal => null,
-
-        // Native we need to override the architecture in the Xcode
-        // project with the -arch flag.
-        .native => switch (builtin.cpu.arch) {
-            .aarch64 => "arm64",
-            .x86_64 => "x86_64",
-            else => @panic("unsupported macOS arch"),
-        },
-    };
+    const xc_arch: ?[]const u8 = "arm64";
 
     const env = try std.process.getEnvMap(b.allocator);
     const app_path = b.fmt("macos/build/{s}/Ghostty.app", .{xc_config});
