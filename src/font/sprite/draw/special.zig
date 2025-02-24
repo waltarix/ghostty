@@ -153,7 +153,7 @@ pub fn underline_curly(
     const y_mid: f64 = half_amplitude + float_thick * 0.5 + 1;
 
     // Offset to move the undercurl up slightly.
-    const y_off: u32 = @intFromFloat(half_amplitude * 0.5);
+    const y_off: u32 = @intFromFloat(y_mid);
 
     // This is used in calculating the offset curve estimate below.
     const offset_factor = @min(1.0, float_thick * 0.5 * wave_period) * @min(
