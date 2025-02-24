@@ -225,15 +225,21 @@ pub fn init(b: *std.Build) !Config {
             else => return err,
         };
         if (vsn.tag) |tag| {
+            // Remove the -custom suffix if present
+            const clean_tag = if (std.mem.indexOf(u8, tag, "-custom")) |idx|
+                tag[0..idx]
+            else
+                tag;
+
             // Tip releases behave just like any other pre-release so we skip.
-            if (!std.mem.eql(u8, tag, "tip")) {
+            if (!std.mem.eql(u8, clean_tag, "tip")) {
                 const expected = b.fmt("v{d}.{d}.{d}", .{
                     app_version.major,
                     app_version.minor,
                     app_version.patch,
                 });
 
-                if (!std.mem.eql(u8, tag, expected)) {
+                if (!std.mem.eql(u8, clean_tag, expected)) {
                     @panic("tagged releases must be in vX.Y.Z format matching build.zig");
                 }
 
