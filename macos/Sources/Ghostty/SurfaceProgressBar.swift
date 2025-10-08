@@ -78,7 +78,8 @@ struct SurfaceProgressBar: View {
 private struct BouncingProgressBar: View {
     let color: Color
     @State private var position: CGFloat = 0
-    
+    @State private var isAnimating = false
+
     private let barWidthRatio: CGFloat = 0.25
     
     var body: some View {
@@ -97,6 +98,7 @@ private struct BouncingProgressBar: View {
             }
         }
         .onAppear {
+            isAnimating = true
             withAnimation(
                 .easeInOut(duration: 1.2)
                 .repeatForever(autoreverses: true)
@@ -104,8 +106,15 @@ private struct BouncingProgressBar: View {
                 position = 1
             }
         }
+        .onChange(of: isAnimating) { newValue in
+            if !newValue {
+                withAnimation(.linear(duration: 0)) {
+                    position = 0
+                }
+            }
+        }
         .onDisappear {
-            position = 0
+            isAnimating = false
         }
     }
 }
