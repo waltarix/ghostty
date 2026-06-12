@@ -63,6 +63,25 @@ pub fn main() !void {
     // });
 }
 
+test "custom east asian width (waltarix/localedata)" {
+    const testing = std.testing;
+    const table = @import("props_table.zig").table;
+
+    // Listed as F in the custom data (vanilla UCD: Ambiguous -> width 1)
+    try testing.expectEqual(2, uucode.get(.width, 0x2605)); // ★
+    try testing.expectEqual(2, uucode.get(.width, 0x203B)); // ※
+    try testing.expectEqual(2, uucode.get(.width, 0x03B1)); // α
+
+    // Unlisted in the custom data (vanilla UCD: Ambiguous) -> width 1
+    try testing.expectEqual(1, uucode.get(.width, 0x25A0)); // ■
+
+    // Wide in vanilla UCD as well (regression check)
+    try testing.expectEqual(2, uucode.get(.width, 0x4E00)); // 一
+
+    // Propagation into Ghostty's three-stage lookup table
+    try testing.expectEqual(2, table.get(0x2605).width);
+}
+
 test "unicode props: tables match uucode" {
     if (std.valgrind.runningOnValgrind() > 0) return error.SkipZigTest;
 

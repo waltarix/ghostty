@@ -1,0 +1,254 @@
+# East_Asian_Width=Neutral
+# East_Asian_Width=Ambiguous
+# East_Asian_Width=Halfwidth
+# East_Asian_Width=Wide
+02C4;F           # Lo         DUMMY
+02C7;F           # Lo         DUMMY
+02C9..02CB;F     # Lo     [3] DUMMY..DUMMY
+02CD;F           # Lo         DUMMY
+02D0;F           # Lo         DUMMY
+02D8..02DB;F     # Lo     [4] DUMMY..DUMMY
+02DD;F           # Lo         DUMMY
+02DF;F           # Lo         DUMMY
+0391..03A1;F     # Lo    [17] DUMMY..DUMMY
+03A3..03A9;F     # Lo     [7] DUMMY..DUMMY
+03B1..03C1;F     # Lo    [17] DUMMY..DUMMY
+03C3..03C9;F     # Lo     [7] DUMMY..DUMMY
+0401;F           # Lo         DUMMY
+0410..044F;F     # Lo    [64] DUMMY..DUMMY
+0451;F           # Lo         DUMMY
+1100..115F;F     # Lo    [96] DUMMY..DUMMY
+2010;F           # Lo         DUMMY
+2013..2016;F     # Lo     [4] DUMMY..DUMMY
+2018..2019;F     # Lo     [2] DUMMY..DUMMY
+201C..201D;F     # Lo     [2] DUMMY..DUMMY
+2020..2022;F     # Lo     [3] DUMMY..DUMMY
+2024..2027;F     # Lo     [4] DUMMY..DUMMY
+2030;F           # Lo         DUMMY
+2032..2033;F     # Lo     [2] DUMMY..DUMMY
+2035;F           # Lo         DUMMY
+203B;F           # Lo         DUMMY
+203E;F           # Lo         DUMMY
+2074;F           # Lo         DUMMY
+207F;F           # Lo         DUMMY
+2081..2084;F     # Lo     [4] DUMMY..DUMMY
+20AC;F           # Lo         DUMMY
+2103;F           # Lo         DUMMY
+2105;F           # Lo         DUMMY
+2109;F           # Lo         DUMMY
+2113;F           # Lo         DUMMY
+2116;F           # Lo         DUMMY
+2121..2122;F     # Lo     [2] DUMMY..DUMMY
+2126;F           # Lo         DUMMY
+212B;F           # Lo         DUMMY
+2153..2154;F     # Lo     [2] DUMMY..DUMMY
+215B..215E;F     # Lo     [4] DUMMY..DUMMY
+2160..216B;F     # Lo    [12] DUMMY..DUMMY
+2170..2179;F     # Lo    [10] DUMMY..DUMMY
+2189;F           # Lo         DUMMY
+2190..2199;F     # Lo    [10] DUMMY..DUMMY
+21B8..21B9;F     # Lo     [2] DUMMY..DUMMY
+21D2;F           # Lo         DUMMY
+21D4;F           # Lo         DUMMY
+21E7;F           # Lo         DUMMY
+2200;F           # Lo         DUMMY
+2202..2203;F     # Lo     [2] DUMMY..DUMMY
+2207..2208;F     # Lo     [2] DUMMY..DUMMY
+220B;F           # Lo         DUMMY
+220F;F           # Lo         DUMMY
+2211;F           # Lo         DUMMY
+2215;F           # Lo         DUMMY
+221A;F           # Lo         DUMMY
+221D..2220;F     # Lo     [4] DUMMY..DUMMY
+2223;F           # Lo         DUMMY
+2225;F           # Lo         DUMMY
+2227..222C;F     # Lo     [6] DUMMY..DUMMY
+222E;F           # Lo         DUMMY
+2234..2237;F     # Lo     [4] DUMMY..DUMMY
+223C..223D;F     # Lo     [2] DUMMY..DUMMY
+2248;F           # Lo         DUMMY
+224C;F           # Lo         DUMMY
+2252;F           # Lo         DUMMY
+2260..2261;F     # Lo     [2] DUMMY..DUMMY
+2264..2267;F     # Lo     [4] DUMMY..DUMMY
+226A..226B;F     # Lo     [2] DUMMY..DUMMY
+226E..226F;F     # Lo     [2] DUMMY..DUMMY
+2282..2283;F     # Lo     [2] DUMMY..DUMMY
+2286..2287;F     # Lo     [2] DUMMY..DUMMY
+2295;F           # Lo         DUMMY
+2299;F           # Lo         DUMMY
+22A5;F           # Lo         DUMMY
+22BF;F           # Lo         DUMMY
+2312;F           # Lo         DUMMY
+231A..231B;F     # Lo     [2] DUMMY..DUMMY
+2329..232A;F     # Lo     [2] DUMMY..DUMMY
+23E9..23EC;F     # Lo     [4] DUMMY..DUMMY
+23F0;F           # Lo         DUMMY
+23F3;F           # Lo         DUMMY
+23FB..23FE;F     # Lo     [4] DUMMY..DUMMY
+2460..24FF;F     # Lo   [160] DUMMY..DUMMY
+25B2..25B3;F     # Lo     [2] DUMMY..DUMMY
+25B6..25B7;F     # Lo     [2] DUMMY..DUMMY
+25BC..25BD;F     # Lo     [2] DUMMY..DUMMY
+25C0..25C1;F     # Lo     [2] DUMMY..DUMMY
+25C6..25C8;F     # Lo     [3] DUMMY..DUMMY
+25CB;F           # Lo         DUMMY
+25CE..25D1;F     # Lo     [4] DUMMY..DUMMY
+25E2..25E5;F     # Lo     [4] DUMMY..DUMMY
+25EF;F           # Lo         DUMMY
+25FD..25FE;F     # Lo     [2] DUMMY..DUMMY
+2605..2606;F     # Lo     [2] DUMMY..DUMMY
+2609;F           # Lo         DUMMY
+260E..260F;F     # Lo     [2] DUMMY..DUMMY
+2614..2615;F     # Lo     [2] DUMMY..DUMMY
+261C;F           # Lo         DUMMY
+261E;F           # Lo         DUMMY
+2630..2637;F     # Lo     [8] DUMMY..DUMMY
+2640;F           # Lo         DUMMY
+2642;F           # Lo         DUMMY
+2648..2653;F     # Lo    [12] DUMMY..DUMMY
+2660..2661;F     # Lo     [2] DUMMY..DUMMY
+2663..2665;F     # Lo     [3] DUMMY..DUMMY
+2667..266A;F     # Lo     [4] DUMMY..DUMMY
+266C..266D;F     # Lo     [2] DUMMY..DUMMY
+266F;F           # Lo         DUMMY
+267F;F           # Lo         DUMMY
+268A..268F;F     # Lo     [6] DUMMY..DUMMY
+2693;F           # Lo         DUMMY
+269E..269F;F     # Lo     [2] DUMMY..DUMMY
+26A1;F           # Lo         DUMMY
+26AA..26AB;F     # Lo     [2] DUMMY..DUMMY
+26BD..26BF;F     # Lo     [3] DUMMY..DUMMY
+26C4..26E1;F     # Lo    [30] DUMMY..DUMMY
+26E3;F           # Lo         DUMMY
+26E8..26FF;F     # Lo    [24] DUMMY..DUMMY
+2705;F           # Lo         DUMMY
+270A..270B;F     # Lo     [2] DUMMY..DUMMY
+2728;F           # Lo         DUMMY
+273D;F           # Lo         DUMMY
+274C;F           # Lo         DUMMY
+274E;F           # Lo         DUMMY
+2753..2755;F     # Lo     [3] DUMMY..DUMMY
+2757;F           # Lo         DUMMY
+2776..277F;F     # Lo    [10] DUMMY..DUMMY
+2795..2797;F     # Lo     [3] DUMMY..DUMMY
+27B0;F           # Lo         DUMMY
+27BF;F           # Lo         DUMMY
+2B1B..2B1C;F     # Lo     [2] DUMMY..DUMMY
+2B50;F           # Lo         DUMMY
+2B55..2B59;F     # Lo     [5] DUMMY..DUMMY
+2E80..2E99;F     # Lo    [26] DUMMY..DUMMY
+2E9B..2EF3;F     # Lo    [89] DUMMY..DUMMY
+2F00..2FD5;F     # Lo   [214] DUMMY..DUMMY
+2FF0..3029;F     # Lo    [58] DUMMY..DUMMY
+302E..303E;F     # Lo    [17] DUMMY..DUMMY
+3041..3096;F     # Lo    [86] DUMMY..DUMMY
+309B..30FF;F     # Lo   [101] DUMMY..DUMMY
+3105..312F;F     # Lo    [43] DUMMY..DUMMY
+3131..318E;F     # Lo    [94] DUMMY..DUMMY
+3190..31E5;F     # Lo    [86] DUMMY..DUMMY
+31EF..321E;F     # Lo    [48] DUMMY..DUMMY
+3220..A48C;F     # Lo [29293] DUMMY..DUMMY
+A490..A4C6;F     # Lo    [55] DUMMY..DUMMY
+A960..A97C;F     # Lo    [29] DUMMY..DUMMY
+AC00..D7A3;F     # Lo [11172] DUMMY..DUMMY
+E000..E09F;F     # Lo   [160] DUMMY..DUMMY
+E0A4..E0AF;F     # Lo    [12] DUMMY..DUMMY
+E0C0..EDFF;F     # Lo  [3392] DUMMY..DUMMY
+EE0C..FA6D;F     # Lo  [3170] DUMMY..DUMMY
+FA70..FAD9;F     # Lo   [106] DUMMY..DUMMY
+FE10..FE19;F     # Lo    [10] DUMMY..DUMMY
+FE30..FE52;F     # Lo    [35] DUMMY..DUMMY
+FE54..FE66;F     # Lo    [19] DUMMY..DUMMY
+FE68..FE6B;F     # Lo     [4] DUMMY..DUMMY
+FF01..FF60;F     # Lo    [96] DUMMY..DUMMY
+FFE0..FFE6;F     # Lo     [7] DUMMY..DUMMY
+FFFD;F           # Lo         DUMMY
+16FE0..16FE3;F   # Lo     [4] DUMMY..DUMMY
+16FF0..16FF6;F   # Lo     [7] DUMMY..DUMMY
+17000..18CD5;F   # Lo  [7382] DUMMY..DUMMY
+18CFF..18D1E;F   # Lo    [32] DUMMY..DUMMY
+18D80..18DF2;F   # Lo   [115] DUMMY..DUMMY
+1AFF0..1AFF3;F   # Lo     [4] DUMMY..DUMMY
+1AFF5..1AFFB;F   # Lo     [7] DUMMY..DUMMY
+1AFFD..1AFFE;F   # Lo     [2] DUMMY..DUMMY
+1B000..1B122;F   # Lo   [291] DUMMY..DUMMY
+1B132;F          # Lo         DUMMY
+1B150..1B152;F   # Lo     [3] DUMMY..DUMMY
+1B155;F          # Lo         DUMMY
+1B164..1B167;F   # Lo     [4] DUMMY..DUMMY
+1B170..1B2FB;F   # Lo   [396] DUMMY..DUMMY
+1D300..1D356;F   # Lo    [87] DUMMY..DUMMY
+1D360..1D376;F   # Lo    [23] DUMMY..DUMMY
+1F004;F          # Lo         DUMMY
+1F0CF;F          # Lo         DUMMY
+1F100..1F10A;F   # Lo    [11] DUMMY..DUMMY
+1F110..1F12D;F   # Lo    [30] DUMMY..DUMMY
+1F130..1F169;F   # Lo    [58] DUMMY..DUMMY
+1F170..1F1AC;F   # Lo    [61] DUMMY..DUMMY
+1F200..1F202;F   # Lo     [3] DUMMY..DUMMY
+1F210..1F23B;F   # Lo    [44] DUMMY..DUMMY
+1F240..1F248;F   # Lo     [9] DUMMY..DUMMY
+1F250..1F251;F   # Lo     [2] DUMMY..DUMMY
+1F260..1F265;F   # Lo     [6] DUMMY..DUMMY
+1F300..1F321;F   # Lo    [34] DUMMY..DUMMY
+1F324..1F393;F   # Lo   [112] DUMMY..DUMMY
+1F396..1F397;F   # Lo     [2] DUMMY..DUMMY
+1F399..1F39B;F   # Lo     [3] DUMMY..DUMMY
+1F39E..1F3F0;F   # Lo    [83] DUMMY..DUMMY
+1F3F3..1F3F5;F   # Lo     [3] DUMMY..DUMMY
+1F3F7..1F3FA;F   # Lo     [4] DUMMY..DUMMY
+1F400..1F4FD;F   # Lo   [254] DUMMY..DUMMY
+1F4FF..1F53D;F   # Lo    [63] DUMMY..DUMMY
+1F549..1F54E;F   # Lo     [6] DUMMY..DUMMY
+1F550..1F567;F   # Lo    [24] DUMMY..DUMMY
+1F56F..1F570;F   # Lo     [2] DUMMY..DUMMY
+1F573..1F57A;F   # Lo     [8] DUMMY..DUMMY
+1F587;F          # Lo         DUMMY
+1F58A..1F58D;F   # Lo     [4] DUMMY..DUMMY
+1F590;F          # Lo         DUMMY
+1F595..1F596;F   # Lo     [2] DUMMY..DUMMY
+1F5A4..1F5A5;F   # Lo     [2] DUMMY..DUMMY
+1F5A8;F          # Lo         DUMMY
+1F5B1..1F5B2;F   # Lo     [2] DUMMY..DUMMY
+1F5BC;F          # Lo         DUMMY
+1F5C2..1F5C4;F   # Lo     [3] DUMMY..DUMMY
+1F5D1..1F5D3;F   # Lo     [3] DUMMY..DUMMY
+1F5DC..1F5DE;F   # Lo     [3] DUMMY..DUMMY
+1F5E1;F          # Lo         DUMMY
+1F5E3;F          # Lo         DUMMY
+1F5E8;F          # Lo         DUMMY
+1F5EF;F          # Lo         DUMMY
+1F5F3;F          # Lo         DUMMY
+1F5FA..1F64F;F   # Lo    [86] DUMMY..DUMMY
+1F680..1F6C5;F   # Lo    [70] DUMMY..DUMMY
+1F6CB..1F6D2;F   # Lo     [8] DUMMY..DUMMY
+1F6D5..1F6D8;F   # Lo     [4] DUMMY..DUMMY
+1F6DC..1F6E5;F   # Lo    [10] DUMMY..DUMMY
+1F6E9;F          # Lo         DUMMY
+1F6EB..1F6EC;F   # Lo     [2] DUMMY..DUMMY
+1F6F0;F          # Lo         DUMMY
+1F6F3..1F6FC;F   # Lo    [10] DUMMY..DUMMY
+1F7E0..1F7EB;F   # Lo    [12] DUMMY..DUMMY
+1F7F0;F          # Lo         DUMMY
+1F90C..1F93A;F   # Lo    [47] DUMMY..DUMMY
+1F93C..1F945;F   # Lo    [10] DUMMY..DUMMY
+1F947..1F9FF;F   # Lo   [185] DUMMY..DUMMY
+1FA70..1FA7C;F   # Lo    [13] DUMMY..DUMMY
+1FA80..1FA8A;F   # Lo    [11] DUMMY..DUMMY
+1FA8E..1FAC6;F   # Lo    [57] DUMMY..DUMMY
+1FAC8;F          # Lo         DUMMY
+1FACD..1FADC;F   # Lo    [16] DUMMY..DUMMY
+1FADF..1FAEA;F   # Lo    [12] DUMMY..DUMMY
+1FAEF..1FAF8;F   # Lo    [10] DUMMY..DUMMY
+20000..2A6DF;F   # Lo [42720] DUMMY..DUMMY
+2A700..2B81D;F   # Lo  [4382] DUMMY..DUMMY
+2B820..2CEAD;F   # Lo  [5774] DUMMY..DUMMY
+2CEB0..2EBE0;F   # Lo  [7473] DUMMY..DUMMY
+2EBF0..2EE5D;F   # Lo   [622] DUMMY..DUMMY
+2F800..2FA1D;F   # Lo   [542] DUMMY..DUMMY
+30000..3134A;F   # Lo  [4939] DUMMY..DUMMY
+31350..33479;F   # Lo  [8490] DUMMY..DUMMY
+F0000..FFFFD;F   # Lo [65534] DUMMY..DUMMY
+# East_Asian_Width=Fullwidth
+# East_Asian_Width=Narrow

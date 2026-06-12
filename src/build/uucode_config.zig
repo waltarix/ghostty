@@ -81,6 +81,67 @@ const is_symbol = config.Extension{
     },
 };
 
+// Custom East Asian Width (waltarix/localedata).
+//
+// Overrides the UCD-derived `east_asian_width` before the `wcwidth`
+// extension computes `wcwidth_standalone`. Code points listed in the
+// embedded data become `.fullwidth` (width 2); everything else becomes
+// `.neutral` (width 1, unless other wcwidth rules apply).
+const eaw_data = @embedFile("DerivedEastAsianWidth.txt");
+
+var custom_wide_initialized = false;
+var custom_wide: [config.max_code_point + 1]bool = undefined;
+
+fn initCustomWide() void {
+    @memset(&custom_wide, false);
+
+    var lines = std.mem.splitScalar(u8, eaw_data, '\n');
+    while (lines.next()) |raw| {
+        const line = if (std.mem.indexOfScalar(u8, raw, '#')) |i| raw[0..i] else raw;
+        const trimmed = std.mem.trim(u8, line, " \t\r");
+        if (trimmed.len == 0) continue;
+
+        var parts = std.mem.splitScalar(u8, trimmed, ';');
+        const cp_str = std.mem.trim(u8, parts.next().?, " \t");
+
+        var range = std.mem.splitSequence(u8, cp_str, "..");
+        const start = std.fmt.parseInt(u21, range.next().?, 16) catch
+            std.debug.panic("invalid code point in DerivedEastAsianWidth.txt: '{s}'", .{cp_str});
+        const end = if (range.next()) |e|
+            std.fmt.parseInt(u21, e, 16) catch
+                std.debug.panic("invalid code point in DerivedEastAsianWidth.txt: '{s}'", .{cp_str})
+        else
+            start;
+
+        for (start..end + 1) |cp| custom_wide[cp] = true;
+    }
+}
+
+fn computeCustomEastAsianWidth(
+    alloc: std.mem.Allocator,
+    cp: u21,
+    data: anytype,
+    backing: anytype,
+    tracking: anytype,
+) Allocator.Error!void {
+    _ = alloc;
+    _ = backing;
+    _ = tracking;
+
+    if (!custom_wide_initialized) {
+        initCustomWide();
+        custom_wide_initialized = true;
+    }
+
+    data.east_asian_width = if (custom_wide[cp]) .fullwidth else .neutral;
+}
+
+const custom_east_asian_width = config.Extension{
+    .inputs = &.{"east_asian_width"},
+    .compute = &computeCustomEastAsianWidth,
+    .fields = &.{d.field("east_asian_width")},
+};
+
 pub const tables = [_]config.Table{
     .{
         .name = "runtime",
@@ -93,6 +154,7 @@ pub const tables = [_]config.Table{
     .{
         .name = "buildtime",
         .extensions = &.{
+            custom_east_asian_width, // must run before `wcwidth`
             wcwidth,
             grapheme_break_no_control,
             width,
